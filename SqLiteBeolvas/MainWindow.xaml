@@ -1,0 +1,29 @@
+﻿<Window x:Class="SqLiteBeolvas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SqLiteBeolvas"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" x:Name="btnCSV" Content="CSV Beillesztés" Height="25" Click="btnCSV_Click"></Button>
+        <TextBlock Grid.Row="1" x:Name="csvSource"></TextBlock>
+        <Button Grid.Row="2" x:Name="btnSQL" Content="SqLite Tallózás" Height="25" Click="btnSQL_Click"></Button>
+        <TextBlock Grid.Row="3" x:Name="sqlSource"></TextBlock>
+        <Button Grid.Row="4" x:Name="btnConvert" Content="SqLite Importálás" Height="25" Click="btnConvert_Click" IsEnabled="False"></Button>
+        <DataGrid x:Name="dgSqlite" Grid.Column="1" Grid.RowSpan="6"></DataGrid>
+    </Grid>
+</Window>
